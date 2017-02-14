@@ -70,6 +70,7 @@ public class Actor extends DomainEntity {
 		this.picture = picture;
 	}
 
+	/* Relationships */
 
 	private UserAccount	userAccount;
 

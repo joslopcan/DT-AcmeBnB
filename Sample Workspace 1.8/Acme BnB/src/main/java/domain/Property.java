@@ -1,9 +1,12 @@
 
 package domain;
 
+import java.util.Collection;
+
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
@@ -56,5 +59,18 @@ public class Property extends DomainEntity {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+
+	private Collection<AttributeValue>	attributeValue;
+
+
+	@OneToMany
+	public Collection<AttributeValue> getAttributeValue() {
+		return attributeValue;
+	}
+
+	public void setAttributeValue(Collection<AttributeValue> attributeValue) {
+		this.attributeValue = attributeValue;
 	}
 }

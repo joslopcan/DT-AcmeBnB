@@ -8,6 +8,8 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -61,4 +63,32 @@ public class Audit extends DomainEntity {
 	public void setAttachments(Collection<String> attachments) {
 		this.attachments = attachments;
 	}
+	
+	/* Relationships */
+	
+	private Auditor auditor;
+	private Property property;
+
+	
+	@Valid
+	@ManyToOne(optional=false)
+	public Auditor getAuditor() {
+		return auditor;
+	}
+
+	public void setAuditor(Auditor auditor) {
+		this.auditor = auditor;
+	}
+
+	@Valid
+	@ManyToOne(optional=false)
+	public Property getProperty() {
+		return property;
+	}
+
+	public void setProperty(Property property) {
+		this.property = property;
+	}
+	
+	
 }

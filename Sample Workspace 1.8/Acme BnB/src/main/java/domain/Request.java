@@ -6,6 +6,7 @@ import java.util.Date;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -55,4 +56,18 @@ public class Request extends DomainEntity {
 	public void setStatus(StatusEnum status) {
 		this.status = status;
 	}
+
+
+	private CreditCard	creditCard;
+
+
+	@ManyToOne(optional = false)
+	public CreditCard getCreditCard() {
+		return creditCard;
+	}
+
+	public void setCreditCard(CreditCard creditCard) {
+		this.creditCard = creditCard;
+	}
+
 }

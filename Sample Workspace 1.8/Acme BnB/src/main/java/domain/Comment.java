@@ -6,6 +6,7 @@ import java.util.Date;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -57,6 +58,29 @@ public class Comment extends DomainEntity {
 
 	public void setStars(int stars) {
 		this.stars = stars;
+	}
+
+
+	private Lessor	lessor;
+	private Tenant	tenant;
+
+
+	@ManyToOne(optional = true)
+	public Lessor getLessor() {
+		return lessor;
+	}
+
+	public void setLessor(Lessor lessor) {
+		this.lessor = lessor;
+	}
+
+	public Tenant getTenant() {
+		return tenant;
+	}
+
+	@ManyToOne(optional = true)
+	public void setTenant(Tenant tenant) {
+		this.tenant = tenant;
 	}
 
 }

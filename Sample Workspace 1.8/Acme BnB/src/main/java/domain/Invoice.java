@@ -6,6 +6,7 @@ import java.util.Date;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -65,6 +66,19 @@ public class Invoice extends DomainEntity {
 
 	public void setAmount(Double amount) {
 		this.amount = amount;
+	}
+
+
+	private CreditCard	creditCard;
+
+
+	@ManyToOne(optional = false)
+	public CreditCard getCreditCard() {
+		return creditCard;
+	}
+
+	public void setCreditCard(CreditCard creditCard) {
+		this.creditCard = creditCard;
 	}
 
 }
