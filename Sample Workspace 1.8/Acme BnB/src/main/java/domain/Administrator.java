@@ -22,6 +22,16 @@ public class Administrator extends Actor {
 	/* Relationships */
 	
 	private SystemConfig systemConfig;
+	private Attribute attribute;
+	
+	@OneToMany
+	public Attribute getAttribute(){
+		return attribute;
+	}
+	
+	public void setAttribute(Attribute attribute){
+		this.attribute = attribute;
+	}
 
 
 	@NotNull
