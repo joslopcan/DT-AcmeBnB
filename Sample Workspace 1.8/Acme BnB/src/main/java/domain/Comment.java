@@ -61,26 +61,16 @@ public class Comment extends DomainEntity {
 	}
 
 
-	private Lessor	lessor;
-	private Tenant	tenant;
+	private Actor	writer;
 
 
-	@ManyToOne(optional = true)
-	public Lessor getLessor() {
-		return lessor;
+	@ManyToOne
+	public Actor getWriter() {
+		return writer;
 	}
 
-	public void setLessor(Lessor lessor) {
-		this.lessor = lessor;
-	}
-
-	public Tenant getTenant() {
-		return tenant;
-	}
-
-	@ManyToOne(optional = true)
-	public void setTenant(Tenant tenant) {
-		this.tenant = tenant;
+	public void setWriter(Actor writer) {
+		this.writer = writer;
 	}
 
 }

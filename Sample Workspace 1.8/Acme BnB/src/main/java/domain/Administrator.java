@@ -1,6 +1,8 @@
 
 package domain;
 
+import java.util.Collection;
+
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
@@ -18,16 +20,16 @@ public class Administrator extends Actor {
 
 	/* Relationships */
 
-	private Attribute	attribute;
+	private Collection<Attribute>	attributes;
 
 
 	@OneToMany
-	public Attribute getAttribute() {
-		return attribute;
+	public Collection<Attribute> getAttributes() {
+		return attributes;
 	}
 
-	public void setAttribute(Attribute attribute) {
-		this.attribute = attribute;
+	public void setAttribute(Collection<Attribute> attributes) {
+		this.attributes = attributes;
 	}
 
 }

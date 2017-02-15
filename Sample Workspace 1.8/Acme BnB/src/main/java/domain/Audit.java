@@ -10,8 +10,9 @@ import javax.persistence.AccessType;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.URL;
@@ -28,11 +29,11 @@ public class Audit extends DomainEntity {
 
 	private Date				writtenMoment;
 	private String				text;
-	private Boolean				isDraft;
+	private boolean				isDraft;
 	private Collection<String>	attachments;
 
 
-	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date getWrittenMoment() {
 		return writtenMoment;
 	}
@@ -48,14 +49,15 @@ public class Audit extends DomainEntity {
 	public void setText(String text) {
 		this.text = text;
 	}
-	@NotNull
-	public Boolean getIsDraft() {
+
+	public boolean getIsDraft() {
 		return isDraft;
 	}
 
 	public void setIsDraft(Boolean isDraft) {
 		this.isDraft = isDraft;
 	}
+
 	@ElementCollection
 	@URL
 	public Collection<String> getAttachments() {

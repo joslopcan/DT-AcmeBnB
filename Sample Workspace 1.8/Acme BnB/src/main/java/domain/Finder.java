@@ -1,9 +1,13 @@
 
 package domain;
 
+import java.util.Collection;
+
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.Min;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -31,6 +35,7 @@ public class Finder extends DomainEntity {
 		this.destinationCity = destinationCity;
 	}
 
+	@Min(0)
 	public double getMinimumPrice() {
 		return minimumPrice;
 	}
@@ -39,6 +44,7 @@ public class Finder extends DomainEntity {
 		this.minimumPrice = minimumPrice;
 	}
 
+	@Min(0)
 	public double getMaximumPrice() {
 		return maximumPrice;
 	}
@@ -54,4 +60,18 @@ public class Finder extends DomainEntity {
 	public void setKeyword(String keyword) {
 		this.keyword = keyword;
 	}
+
+
+	private Collection<Property>	propertiesFound;
+
+
+	@OneToMany
+	public Collection<Property> getPropertiesFound() {
+		return propertiesFound;
+	}
+
+	public void setPropertiesFound(Collection<Property> propertiesFound) {
+		this.propertiesFound = propertiesFound;
+	}
+
 }

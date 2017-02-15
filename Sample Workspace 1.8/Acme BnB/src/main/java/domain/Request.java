@@ -58,8 +58,28 @@ public class Request extends DomainEntity {
 	}
 
 
+	private Tenant		tenant;
+	private Property	property;
 	private CreditCard	creditCard;
 
+
+	@ManyToOne(optional = false)
+	public Tenant getTenant() {
+		return tenant;
+	}
+
+	public void setTenant(Tenant tenant) {
+		this.tenant = tenant;
+	}
+
+	@ManyToOne(optional = false)
+	public Property getProperty() {
+		return property;
+	}
+
+	public void setProperty(Property property) {
+		this.property = property;
+	}
 
 	@ManyToOne(optional = false)
 	public CreditCard getCreditCard() {

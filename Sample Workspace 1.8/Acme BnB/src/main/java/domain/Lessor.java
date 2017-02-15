@@ -8,6 +8,7 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
@@ -38,7 +39,17 @@ public class Lessor extends Actor implements Commentable {
 
 	private Collection<Request>		requests;
 	private Collection<Property>	properties;
+	private CreditCard				creditCard;
 
+
+	@OneToOne
+	public CreditCard getCreditCard() {
+		return creditCard;
+	}
+
+	public void setCreditCard(CreditCard creditCard) {
+		this.creditCard = creditCard;
+	}
 
 	@OneToMany
 	public Collection<Request> getRequests() {
@@ -49,7 +60,7 @@ public class Lessor extends Actor implements Commentable {
 		this.requests = requests;
 	}
 
-	@OneToMany
+	@OneToMany(mappedBy = "lessor")
 	public Collection<Property> getProperties() {
 		return properties;
 	}
@@ -59,6 +70,7 @@ public class Lessor extends Actor implements Commentable {
 	}
 
 	@Override
+	@OneToMany
 	public Collection<Comment> getComments() {
 		return comments;
 	}

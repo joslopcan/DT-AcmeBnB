@@ -24,7 +24,7 @@ public class Invoice extends DomainEntity {
 	private String	VATNumber;
 	private String	details;
 	private String	tenantInformation;
-	private Double	amount;
+	private double	amount;
 
 
 	@NotNull
@@ -60,11 +60,11 @@ public class Invoice extends DomainEntity {
 		this.tenantInformation = tenantInformation;
 	}
 
-	public Double getAmount() {
+	public double getAmount() {
 		return amount;
 	}
 
-	public void setAmount(Double amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 

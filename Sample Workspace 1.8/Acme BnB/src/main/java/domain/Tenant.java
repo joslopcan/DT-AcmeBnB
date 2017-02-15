@@ -21,10 +21,21 @@ public class Tenant extends Actor implements Commentable {
 	}
 
 
+	private Collection<Request>	requests;
 	private Collection<Comment>	comments;
 	private Collection<Invoice>	invoices;
 	private Finder				finder;
+	private CreditCard			creditCard;
 
+
+	@OneToMany(mappedBy = "tenant")
+	public Collection<Request> getRequests() {
+		return requests;
+	}
+
+	public void setRequests(Collection<Request> requests) {
+		this.requests = requests;
+	}
 
 	@OneToMany
 	public Collection<Invoice> getInvoices() {
@@ -44,6 +55,7 @@ public class Tenant extends Actor implements Commentable {
 	}
 
 	@Override
+	@OneToMany
 	public Collection<Comment> getComments() {
 		return comments;
 	}
@@ -52,6 +64,15 @@ public class Tenant extends Actor implements Commentable {
 	public void setComments(Collection<Comment> comments) {
 		this.comments = comments;
 
+	}
+
+	@OneToOne
+	public CreditCard getCreditCard() {
+		return creditCard;
+	}
+
+	public void setCreditCard(CreditCard creditCard) {
+		this.creditCard = creditCard;
 	}
 
 }
