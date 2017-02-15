@@ -3,6 +3,7 @@ package domain;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
@@ -21,6 +22,7 @@ public class Audit extends DomainEntity {
 
 	public Audit() {
 		super();
+		attachments = new HashSet<String>();
 	}
 
 
@@ -63,15 +65,16 @@ public class Audit extends DomainEntity {
 	public void setAttachments(Collection<String> attachments) {
 		this.attachments = attachments;
 	}
-	
-	/* Relationships */
-	
-	private Auditor auditor;
-	private Property property;
 
-	
+
+	/* Relationships */
+
+	private Auditor		auditor;
+	private Property	property;
+
+
 	@Valid
-	@ManyToOne(optional=false)
+	@ManyToOne(optional = false)
 	public Auditor getAuditor() {
 		return auditor;
 	}
@@ -81,7 +84,7 @@ public class Audit extends DomainEntity {
 	}
 
 	@Valid
-	@ManyToOne(optional=false)
+	@ManyToOne(optional = false)
 	public Property getProperty() {
 		return property;
 	}
@@ -89,6 +92,5 @@ public class Audit extends DomainEntity {
 	public void setProperty(Property property) {
 		this.property = property;
 	}
-	
-	
+
 }

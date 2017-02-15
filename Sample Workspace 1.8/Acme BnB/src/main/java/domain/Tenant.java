@@ -2,6 +2,7 @@
 package domain;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
@@ -11,16 +12,18 @@ import javax.persistence.OneToOne;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Tenant extends Actor {
+public class Tenant extends Actor implements Commentable {
 
 	public Tenant() {
 		super();
+		comments = new HashSet<Comment>();
+		invoices = new HashSet<Invoice>();
 	}
 
 
+	private Collection<Comment>	comments;
 	private Collection<Invoice>	invoices;
 	private Finder				finder;
-	private Collection<Comment>	comments;
 
 
 	@OneToMany
@@ -39,12 +42,16 @@ public class Tenant extends Actor {
 	public void setFinder(Finder finder) {
 		this.finder = finder;
 	}
-	@OneToMany(mappedBy = "tenant")
+
+	@Override
 	public Collection<Comment> getComments() {
 		return comments;
 	}
 
+	@Override
 	public void setComments(Collection<Comment> comments) {
 		this.comments = comments;
+
 	}
+
 }

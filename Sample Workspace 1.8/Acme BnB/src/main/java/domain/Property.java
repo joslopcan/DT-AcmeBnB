@@ -2,6 +2,7 @@
 package domain;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
@@ -18,6 +19,7 @@ public class Property extends DomainEntity {
 
 	public Property() {
 		super();
+		attribute = new HashSet<Attribute>();
 	}
 
 
@@ -62,15 +64,15 @@ public class Property extends DomainEntity {
 	}
 
 
-	private Collection<AttributeValue>	attributeValue;
+	private Collection<Attribute>	attribute;
 
 
 	@OneToMany
-	public Collection<AttributeValue> getAttributeValue() {
-		return attributeValue;
+	public Collection<Attribute> getAttribute() {
+		return attribute;
 	}
 
-	public void setAttributeValue(Collection<AttributeValue> attributeValue) {
-		this.attributeValue = attributeValue;
+	public void setAttribute(Collection<Attribute> attribute) {
+		this.attribute = attribute;
 	}
 }

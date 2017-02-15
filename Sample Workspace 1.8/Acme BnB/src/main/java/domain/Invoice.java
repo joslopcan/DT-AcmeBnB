@@ -59,7 +59,7 @@ public class Invoice extends DomainEntity {
 	public void setTenantInformation(String tenantInformation) {
 		this.tenantInformation = tenantInformation;
 	}
-	@NotNull
+
 	public Double getAmount() {
 		return amount;
 	}

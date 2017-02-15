@@ -2,6 +2,7 @@
 package domain;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
@@ -17,6 +18,7 @@ public class Auditor extends Actor {
 
 	public Auditor() {
 		super();
+		audits = new HashSet<Audit>();
 	}
 
 
@@ -31,13 +33,15 @@ public class Auditor extends Actor {
 	public void setCompanyName(String companyName) {
 		this.companyName = companyName;
 	}
-	
-/* Relationships */
-	
-	private Collection<Audit> audits;
+
+
+	/* Relationships */
+
+	private Collection<Audit>	audits;
+
 
 	@Valid
-	@OneToMany(mappedBy="auditor")
+	@OneToMany(mappedBy = "auditor")
 	public Collection<Audit> getAudits() {
 		return audits;
 	}

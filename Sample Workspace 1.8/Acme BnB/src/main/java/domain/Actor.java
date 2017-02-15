@@ -5,6 +5,7 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -70,11 +71,21 @@ public class Actor extends DomainEntity {
 		this.picture = picture;
 	}
 
+
 	/* Relationships */
 
-	private UserAccount	userAccount;
+	private UserAccount		userAccount;
+	private SocialIdentity	socialIdentity;
 
 
+	@OneToMany
+	public SocialIdentity getSocialIdentity() {
+		return socialIdentity;
+	}
+
+	public void setSocialIdentity(SocialIdentity socialIdentity) {
+		this.socialIdentity = socialIdentity;
+	}
 	@NotNull
 	@Valid
 	@OneToOne(cascade = CascadeType.ALL, optional = false)
