@@ -18,7 +18,6 @@ public class Attribute extends DomainEntity {
 
 	private String	spanishName;
 	private String	englishName;
-	private String	value;
 
 
 	@NotBlank
@@ -36,14 +35,5 @@ public class Attribute extends DomainEntity {
 
 	public void setEnglishName(String englishName) {
 		this.englishName = englishName;
-	}
-
-	@NotBlank
-	public String getValue() {
-		return value;
-	}
-
-	public void setValue(String value) {
-		this.value = value;
 	}
 }

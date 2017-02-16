@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="87" version="2.0">
+<workbench progressCount="79" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="951" x="320" y="75">
 <fastViewData fastViewLocation="1024"/>
@@ -21,6 +21,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="183" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -32,7 +33,7 @@
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.m2e.editor.MavenPomEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -41,15 +42,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="PopulateDatabase.xml" partName="PopulateDatabase.xml" path="T:/Sample Workspace 1.8/Acme BnB/src/main/resources/PopulateDatabase.xml" title="PopulateDatabase.xml" tooltip="Acme BnB/src/main/resources/PopulateDatabase.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme BnB/src/main/resources/PopulateDatabase.xml"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
@@ -113,7 +109,7 @@
 <viewState CommonNavigator.LINKING_ENABLED="0"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -290,173 +286,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/Acme BnB/src/main/resources/PopulateDatabase.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/Request.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/Actor.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/Administrator.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/SocialIdentity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/SystemConfig.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/security/Authority.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/security/Credentials.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/security/LoginController.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/security/LoginService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/security/UserAccount.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/security/UserAccountRepository.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/utilities/CreateConverters.java"/>
-</editors>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="7861" y="0"/>
-</item>
-<item historyLabel="Request.java" index="1">
-<position info="not_deleted" x="380" y="11"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="7894" y="0"/>
-</item>
-<item historyLabel="Request.java" index="1">
-<position info="not_deleted" x="409" y="12"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="7951" y="0"/>
-</item>
-<item historyLabel="Request.java" index="1">
-<position info="not_deleted" x="442" y="8"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="8005" y="0"/>
-</item>
-<item historyLabel="Request.java" index="1">
-<position info="not_deleted" x="473" y="6"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="8060" y="0"/>
-</item>
-<item historyLabel="Request.java" index="1">
-<position info="not_deleted" x="473" y="6"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="8140" y="1"/>
-</item>
-<item historyLabel="Request.java" index="1">
-<position info="not_deleted" x="473" y="6"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="8216" y="0"/>
-</item>
-<item historyLabel="Request.java" index="1">
-<position info="not_deleted" x="473" y="6"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position/>
-</item>
-<item historyLabel="Request.java" index="1">
-<position info="not_deleted" x="473" y="6"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position/>
-</item>
-<item historyLabel="Actor.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Administrator.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Actor.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position/>
-</item>
-<item historyLabel="Request.java" index="1">
-<position info="not_deleted" x="473" y="6"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position/>
-</item>
-<item historyLabel="SocialIdentity.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="8285" y="0"/>
-</item>
-<item historyLabel="SocialIdentity.java" index="4">
-<position info="not_deleted" x="391" y="4"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="8311" y="0"/>
-</item>
-<item historyLabel="SocialIdentity.java" index="4">
-<position info="not_deleted" x="414" y="17"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="8373" y="0"/>
-</item>
-<item historyLabel="SocialIdentity.java" index="4">
-<position info="not_deleted" x="450" y="10"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="8429" y="0"/>
-</item>
-<item historyLabel="SocialIdentity.java" index="4">
-<position info="not_deleted" x="450" y="10"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position/>
-</item>
-<item historyLabel="SocialIdentity.java" index="4">
-<position info="not_deleted" x="450" y="10"/>
-</item>
-<item historyLabel="SystemConfig.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="7481" y="0"/>
-</item>
-<item historyLabel="SystemConfig.java" index="5">
-<position info="not_deleted" x="370" y="3"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="8548" y="0"/>
-</item>
-<item historyLabel="SystemConfig.java" index="5">
-<position info="not_deleted" x="392" y="9"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position info="not_deleted" x="4747" y="0"/>
-</item>
-<item historyLabel="Authority.java" index="6">
-<position info="not_deleted" x="2031" y="0"/>
-</item>
-<item historyLabel="Credentials.java" index="7">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="Authority.java" index="6">
-<position info="not_deleted" x="2031" y="0"/>
-</item>
-<item historyLabel="LoginController.java" index="8">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="LoginService.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="UserAccount.java" index="10">
-<position info="not_deleted" x="1993" y="38"/>
-</item>
-<item historyLabel="UserAccountRepository.java" index="11">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="PopulateDatabase.xml" index="0">
-<position/>
-</item>
-<item historyLabel="CreateConverters.java" index="12">
-<position info="not_deleted" x="721" y="0"/>
-</item>
-<item active="true" historyLabel="PopulateDatabase.xml" index="0">
-<position/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -484,26 +314,8 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CreateConverters.java" tooltip="Acme BnB/src/main/java/utilities/CreateConverters.java">
-<persistable path="/Acme BnB/src/main/java/utilities/CreateConverters.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserAccountRepository.java" tooltip="Acme BnB/src/main/java/security/UserAccountRepository.java">
-<persistable path="/Acme BnB/src/main/java/security/UserAccountRepository.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserAccount.java" tooltip="Acme BnB/src/main/java/security/UserAccount.java">
-<persistable path="/Acme BnB/src/main/java/security/UserAccount.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoginService.java" tooltip="Acme BnB/src/main/java/security/LoginService.java">
-<persistable path="/Acme BnB/src/main/java/security/LoginService.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoginController.java" tooltip="Acme BnB/src/main/java/security/LoginController.java">
-<persistable path="/Acme BnB/src/main/java/security/LoginController.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Credentials.java" tooltip="Acme BnB/src/main/java/security/Credentials.java">
-<persistable path="/Acme BnB/src/main/java/security/Credentials.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Authority.java" tooltip="Acme BnB/src/main/java/security/Authority.java">
-<persistable path="/Acme BnB/src/main/java/security/Authority.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Tenant.java" tooltip="Acme BnB/src/main/java/domain/Tenant.java">
+<persistable path="/Acme BnB/src/main/java/domain/Tenant.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SystemConfig.java" tooltip="Acme BnB/src/main/java/domain/SystemConfig.java">
 <persistable path="/Acme BnB/src/main/java/domain/SystemConfig.java"/>
@@ -511,23 +323,41 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SocialIdentity.java" tooltip="Acme BnB/src/main/java/domain/SocialIdentity.java">
 <persistable path="/Acme BnB/src/main/java/domain/SocialIdentity.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Administrator.java" tooltip="Acme BnB/src/main/java/domain/Administrator.java">
-<persistable path="/Acme BnB/src/main/java/domain/Administrator.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Actor.java" tooltip="Acme BnB/src/main/java/domain/Actor.java">
-<persistable path="/Acme BnB/src/main/java/domain/Actor.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StatusEnum.java" tooltip="Acme BnB/src/main/java/domain/StatusEnum.java">
-<persistable path="/Acme BnB/src/main/java/domain/StatusEnum.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Request.java" tooltip="Acme BnB/src/main/java/domain/Request.java">
 <persistable path="/Acme BnB/src/main/java/domain/Request.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Property.java" tooltip="Acme BnB/src/main/java/domain/Property.java">
+<persistable path="/Acme BnB/src/main/java/domain/Property.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Lessor.java" tooltip="Acme BnB/src/main/java/domain/Lessor.java">
 <persistable path="/Acme BnB/src/main/java/domain/Lessor.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Audit.java" tooltip="Acme BnB/src/main/java/domain/Audit.java">
-<persistable path="/Acme BnB/src/main/java/domain/Audit.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Invoice.java" tooltip="Acme BnB/src/main/java/domain/Invoice.java">
+<persistable path="/Acme BnB/src/main/java/domain/Invoice.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Finder.java" tooltip="Acme BnB/src/main/java/domain/Finder.java">
+<persistable path="/Acme BnB/src/main/java/domain/Finder.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CreditCard.java" tooltip="Acme BnB/src/main/java/domain/CreditCard.java">
+<persistable path="/Acme BnB/src/main/java/domain/CreditCard.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Commentable.java" tooltip="Acme BnB/src/main/java/domain/Commentable.java">
+<persistable path="/Acme BnB/src/main/java/domain/Commentable.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Comment.java" tooltip="Acme BnB/src/main/java/domain/Comment.java">
+<persistable path="/Acme BnB/src/main/java/domain/Comment.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Auditor.java" tooltip="Acme BnB/src/main/java/domain/Auditor.java">
+<persistable path="/Acme BnB/src/main/java/domain/Auditor.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AttributeValue.java" tooltip="Acme BnB/src/main/java/domain/AttributeValue.java">
+<persistable path="/Acme BnB/src/main/java/domain/AttributeValue.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Attribute.java" tooltip="Acme BnB/src/main/java/domain/Attribute.java">
+<persistable path="/Acme BnB/src/main/java/domain/Attribute.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Administrator.java" tooltip="Acme BnB/src/main/java/domain/Administrator.java">
+<persistable path="/Acme BnB/src/main/java/domain/Administrator.java"/>
 </file>
 </mruList>
 </workbench>

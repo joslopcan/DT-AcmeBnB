@@ -15,7 +15,6 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 
 import org.hibernate.validator.constraints.NotBlank;
-import org.hibernate.validator.constraints.URL;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -58,8 +57,9 @@ public class Audit extends DomainEntity {
 		this.isDraft = isDraft;
 	}
 
+	//TODO comprobar las url de attachments?
+
 	@ElementCollection
-	@URL
 	public Collection<String> getAttachments() {
 		return attachments;
 	}

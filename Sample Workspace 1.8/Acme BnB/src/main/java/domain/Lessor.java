@@ -10,7 +10,6 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -26,18 +25,17 @@ public class Lessor extends Actor implements Commentable {
 	private double				totalFee;
 
 
-	@NotNull
 	@Min(0)
-	public double getFee() {
+	public double getTotalFee() {
 		return totalFee;
 	}
 
-	public void setFee(double fee) {
-		this.totalFee = fee;
+	public void setTotalFee(double totalFee) {
+		this.totalFee = totalFee;
 	}
 
 
-	private Collection<Request>		requests;
+	private Collection<Request>		pendingRequest;
 	private Collection<Property>	properties;
 	private CreditCard				creditCard;
 
@@ -52,12 +50,12 @@ public class Lessor extends Actor implements Commentable {
 	}
 
 	@OneToMany
-	public Collection<Request> getRequests() {
-		return requests;
+	public Collection<Request> getPendingRequest() {
+		return pendingRequest;
 	}
 
-	public void setRequests(Collection<Request> requests) {
-		this.requests = requests;
+	public void setPendingRequest(Collection<Request> pendingRequest) {
+		this.pendingRequest = pendingRequest;
 	}
 
 	@OneToMany(mappedBy = "lessor")

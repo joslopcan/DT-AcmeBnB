@@ -31,7 +31,6 @@ public class SocialIdentity extends DomainEntity {
 		this.nick = nick;
 	}
 	@NotBlank
-	@URL
 	public String getSocialNetworkName() {
 		return socialNetworkName;
 	}
@@ -40,6 +39,7 @@ public class SocialIdentity extends DomainEntity {
 		this.socialNetworkName = socialNetworkName;
 	}
 
+	@URL
 	public String getProfileURL() {
 		return profileURL;
 	}

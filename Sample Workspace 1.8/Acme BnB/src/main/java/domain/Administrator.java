@@ -28,7 +28,7 @@ public class Administrator extends Actor {
 		return attributes;
 	}
 
-	public void setAttribute(Collection<Attribute> attributes) {
+	public void setAttributes(Collection<Attribute> attributes) {
 		this.attributes = attributes;
 	}
 

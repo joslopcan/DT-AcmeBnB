@@ -2,12 +2,16 @@
 package domain;
 
 import java.util.Collection;
+import java.util.Date;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -24,6 +28,7 @@ public class Finder extends DomainEntity {
 	private double	minimumPrice;
 	private double	maximumPrice;
 	private String	keyword;
+	private Date	searchMoment;
 
 
 	@NotBlank
@@ -59,6 +64,16 @@ public class Finder extends DomainEntity {
 
 	public void setKeyword(String keyword) {
 		this.keyword = keyword;
+	}
+
+	@Past
+	@Temporal(TemporalType.TIMESTAMP)
+	public Date getSearchMoment() {
+		return searchMoment;
+	}
+
+	public void setSearchMoment(Date searchMoment) {
+		this.searchMoment = searchMoment;
 	}
 
 
