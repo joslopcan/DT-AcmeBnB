@@ -2,53 +2,63 @@
 package domain;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Access(AccessType.PROPERTY)
-public class Lessor extends Actor {
+public class Lessor extends Actor implements Commentable {
 
 	public Lessor() {
 		super();
+		comments = new HashSet<Comment>();
 	}
 
 
-	private double	fee;
+	private Collection<Comment>	comments;
+	private double				totalFee;
 
 
-	@NotNull
 	@Min(0)
-	public double getFee() {
-		return fee;
+	public double getTotalFee() {
+		return totalFee;
 	}
 
-	public void setFee(double fee) {
-		this.fee = fee;
+	public void setTotalFee(double totalFee) {
+		this.totalFee = totalFee;
 	}
 
 
-	private Collection<Request>		requests;
+	private Collection<Request>		pendingRequest;
 	private Collection<Property>	properties;
-	private Collection<Comment>		comments;
 	private CreditCard				creditCard;
 
 
-	@OneToMany
-	public Collection<Request> getRequests() {
-		return requests;
+	@OneToOne
+	public CreditCard getCreditCard() {
+		return creditCard;
 	}
 
-	public void setRequests(Collection<Request> requests) {
-		this.requests = requests;
+	public void setCreditCard(CreditCard creditCard) {
+		this.creditCard = creditCard;
 	}
 
 	@OneToMany
+	public Collection<Request> getPendingRequest() {
+		return pendingRequest;
+	}
+
+	public void setPendingRequest(Collection<Request> pendingRequest) {
+		this.pendingRequest = pendingRequest;
+	}
+
+	@OneToMany(mappedBy = "lessor")
 	public Collection<Property> getProperties() {
 		return properties;
 	}
@@ -57,13 +67,16 @@ public class Lessor extends Actor {
 		this.properties = properties;
 	}
 
-	@OneToMany(mappedBy = "lessor")
+	@Override
+	@OneToMany
 	public Collection<Comment> getComments() {
 		return comments;
 	}
 
+	@Override
 	public void setComments(Collection<Comment> comments) {
 		this.comments = comments;
+
 	}
 
 }

@@ -3,17 +3,18 @@ package domain;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
-import org.hibernate.validator.constraints.URL;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -21,16 +22,17 @@ public class Audit extends DomainEntity {
 
 	public Audit() {
 		super();
+		attachments = new HashSet<String>();
 	}
 
 
 	private Date				writtenMoment;
 	private String				text;
-	private Boolean				isDraft;
+	private boolean				isDraft;
 	private Collection<String>	attachments;
 
 
-	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date getWrittenMoment() {
 		return writtenMoment;
 	}
@@ -46,16 +48,18 @@ public class Audit extends DomainEntity {
 	public void setText(String text) {
 		this.text = text;
 	}
-	@NotNull
-	public Boolean getIsDraft() {
+
+	public boolean getIsDraft() {
 		return isDraft;
 	}
 
 	public void setIsDraft(Boolean isDraft) {
 		this.isDraft = isDraft;
 	}
+
+	//TODO comprobar las url de attachments?
+
 	@ElementCollection
-	@URL
 	public Collection<String> getAttachments() {
 		return attachments;
 	}
@@ -63,15 +67,16 @@ public class Audit extends DomainEntity {
 	public void setAttachments(Collection<String> attachments) {
 		this.attachments = attachments;
 	}
-	
-	/* Relationships */
-	
-	private Auditor auditor;
-	private Property property;
 
-	
+
+	/* Relationships */
+
+	private Auditor		auditor;
+	private Property	property;
+
+
 	@Valid
-	@ManyToOne(optional=false)
+	@ManyToOne(optional = false)
 	public Auditor getAuditor() {
 		return auditor;
 	}
@@ -81,7 +86,7 @@ public class Audit extends DomainEntity {
 	}
 
 	@Valid
-	@ManyToOne(optional=false)
+	@ManyToOne(optional = false)
 	public Property getProperty() {
 		return property;
 	}
@@ -89,6 +94,5 @@ public class Audit extends DomainEntity {
 	public void setProperty(Property property) {
 		this.property = property;
 	}
-	
-	
+
 }

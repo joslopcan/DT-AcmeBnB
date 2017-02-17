@@ -1,13 +1,12 @@
 
 package domain;
 
+import java.util.Collection;
+
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import javax.persistence.OneToMany;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -17,32 +16,20 @@ public class Administrator extends Actor {
 		super();
 
 	}
-	
+
 
 	/* Relationships */
-	
-	private SystemConfig systemConfig;
-	private Attribute attribute;
-	
+
+	private Collection<Attribute>	attributes;
+
+
 	@OneToMany
-	public Attribute getAttribute(){
-		return attribute;
-	}
-	
-	public void setAttribute(Attribute attribute){
-		this.attribute = attribute;
+	public Collection<Attribute> getAttributes() {
+		return attributes;
 	}
 
-
-	@NotNull
-	@Valid
-	@OneToOne(optional = false)
-	public SystemConfig getSystemConfig() {
-		return systemConfig;
-	}
-
-	public void setSystemConfig(SystemConfig systemConfig) {
-		this.systemConfig = systemConfig;
+	public void setAttributes(Collection<Attribute> attributes) {
+		this.attributes = attributes;
 	}
 
 }

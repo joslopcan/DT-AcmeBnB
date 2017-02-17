@@ -1,9 +1,17 @@
 
 package domain;
 
+import java.util.Collection;
+import java.util.Date;
+
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -20,6 +28,7 @@ public class Finder extends DomainEntity {
 	private double	minimumPrice;
 	private double	maximumPrice;
 	private String	keyword;
+	private Date	searchMoment;
 
 
 	@NotBlank
@@ -31,6 +40,7 @@ public class Finder extends DomainEntity {
 		this.destinationCity = destinationCity;
 	}
 
+	@Min(0)
 	public double getMinimumPrice() {
 		return minimumPrice;
 	}
@@ -39,6 +49,7 @@ public class Finder extends DomainEntity {
 		this.minimumPrice = minimumPrice;
 	}
 
+	@Min(0)
 	public double getMaximumPrice() {
 		return maximumPrice;
 	}
@@ -54,4 +65,28 @@ public class Finder extends DomainEntity {
 	public void setKeyword(String keyword) {
 		this.keyword = keyword;
 	}
+
+	@Past
+	@Temporal(TemporalType.TIMESTAMP)
+	public Date getSearchMoment() {
+		return searchMoment;
+	}
+
+	public void setSearchMoment(Date searchMoment) {
+		this.searchMoment = searchMoment;
+	}
+
+
+	private Collection<Property>	propertiesFound;
+
+
+	@OneToMany
+	public Collection<Property> getPropertiesFound() {
+		return propertiesFound;
+	}
+
+	public void setPropertiesFound(Collection<Property> propertiesFound) {
+		this.propertiesFound = propertiesFound;
+	}
+
 }

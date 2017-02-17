@@ -1,0 +1,98 @@
+
+package domain;
+
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashSet;
+
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.Valid;
+
+import org.hibernate.validator.constraints.NotBlank;
+
+@Entity
+@Access(AccessType.PROPERTY)
+public class Audit extends DomainEntity {
+
+	public Audit() {
+		super();
+		attachments = new HashSet<String>();
+	}
+
+
+	private Date				writtenMoment;
+	private String				text;
+	private boolean				isDraft;
+	private Collection<String>	attachments;
+
+
+	@Temporal(TemporalType.TIMESTAMP)
+	public Date getWrittenMoment() {
+		return writtenMoment;
+	}
+
+	public void setWrittenMoment(Date writtenMoment) {
+		this.writtenMoment = writtenMoment;
+	}
+	@NotBlank
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public boolean getIsDraft() {
+		return isDraft;
+	}
+
+	public void setIsDraft(Boolean isDraft) {
+		this.isDraft = isDraft;
+	}
+	
+	//TODO comprobar las url de attachments?
+	
+	@ElementCollection
+	public Collection<String> getAttachments() {
+		return attachments;
+	}
+
+	public void setAttachments(Collection<String> attachments) {
+		this.attachments = attachments;
+	}
+
+
+	/* Relationships */
+
+	private Auditor		auditor;
+	private Property	property;
+
+
+	@Valid
+	@ManyToOne(optional = false)
+	public Auditor getAuditor() {
+		return auditor;
+	}
+
+	public void setAuditor(Auditor auditor) {
+		this.auditor = auditor;
+	}
+
+	@Valid
+	@ManyToOne(optional = false)
+	public Property getProperty() {
+		return property;
+	}
+
+	public void setProperty(Property property) {
+		this.property = property;
+	}
+
+}

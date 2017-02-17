@@ -7,7 +7,8 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -24,10 +25,10 @@ public class Invoice extends DomainEntity {
 	private String	VATNumber;
 	private String	details;
 	private String	tenantInformation;
-	private Double	amount;
+	private double	amount;
 
 
-	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date getIssuedMoment() {
 		return issuedMoment;
 	}
@@ -59,12 +60,12 @@ public class Invoice extends DomainEntity {
 	public void setTenantInformation(String tenantInformation) {
 		this.tenantInformation = tenantInformation;
 	}
-	@NotNull
-	public Double getAmount() {
+
+	public double getAmount() {
 		return amount;
 	}
 
-	public void setAmount(Double amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 

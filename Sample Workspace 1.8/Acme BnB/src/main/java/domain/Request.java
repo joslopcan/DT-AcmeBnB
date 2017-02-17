@@ -7,6 +7,8 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -24,7 +26,7 @@ public class Request extends DomainEntity {
 	private StatusEnum	status;
 
 
-	@NotNull
+	@Temporal(TemporalType.DATE)
 	public Date getCheckinDate() {
 		return checkinDate;
 	}
@@ -32,7 +34,8 @@ public class Request extends DomainEntity {
 	public void setCheckinDate(Date checkinDate) {
 		this.checkinDate = checkinDate;
 	}
-	@NotNull
+
+	@Temporal(TemporalType.DATE)
 	public Date getCheckoutDate() {
 		return checkoutDate;
 	}
@@ -40,7 +43,7 @@ public class Request extends DomainEntity {
 	public void setCheckoutDate(Date checkoutDate) {
 		this.checkoutDate = checkoutDate;
 	}
-	@NotNull
+
 	public boolean isSmoker() {
 		return isSmoker;
 	}
@@ -58,8 +61,28 @@ public class Request extends DomainEntity {
 	}
 
 
+	private Tenant		tenant;
+	private Property	property;
 	private CreditCard	creditCard;
 
+
+	@ManyToOne(optional = false)
+	public Tenant getTenant() {
+		return tenant;
+	}
+
+	public void setTenant(Tenant tenant) {
+		this.tenant = tenant;
+	}
+
+	@ManyToOne(optional = false)
+	public Property getProperty() {
+		return property;
+	}
+
+	public void setProperty(Property property) {
+		this.property = property;
+	}
 
 	@ManyToOne(optional = false)
 	public CreditCard getCreditCard() {

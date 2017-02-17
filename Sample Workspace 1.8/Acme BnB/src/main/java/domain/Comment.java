@@ -7,7 +7,8 @@ import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.Range;
@@ -35,7 +36,8 @@ public class Comment extends DomainEntity {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	@NotNull
+
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date getPostMoment() {
 		return postMoment;
 	}
@@ -61,26 +63,16 @@ public class Comment extends DomainEntity {
 	}
 
 
-	private Lessor	lessor;
-	private Tenant	tenant;
+	private Actor	writer;
 
 
-	@ManyToOne(optional = true)
-	public Lessor getLessor() {
-		return lessor;
+	@ManyToOne
+	public Actor getWriter() {
+		return writer;
 	}
 
-	public void setLessor(Lessor lessor) {
-		this.lessor = lessor;
-	}
-
-	public Tenant getTenant() {
-		return tenant;
-	}
-
-	@ManyToOne(optional = true)
-	public void setTenant(Tenant tenant) {
-		this.tenant = tenant;
+	public void setWriter(Actor writer) {
+		this.writer = writer;
 	}
 
 }
