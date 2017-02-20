@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -51,7 +50,7 @@ public class Request extends DomainEntity {
 	public void setSmoker(boolean isSmoker) {
 		this.isSmoker = isSmoker;
 	}
-	@NotNull
+
 	public StatusEnum getStatus() {
 		return status;
 	}
