@@ -54,4 +54,5 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="javax.persistence.Temporal"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Past"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
 </qualifiedTypeNameHistroy>
