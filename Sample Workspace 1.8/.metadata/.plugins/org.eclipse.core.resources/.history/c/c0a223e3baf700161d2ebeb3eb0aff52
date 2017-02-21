@@ -271,12 +271,12 @@
 		</property>
 		<property name="comments">
 			<list>
-				
+				<ref bean="comment1" />
 			</list>
 		</property>
 		<property name="pendingRequest">
 			<list>
-				
+				<ref bean="request1" />
 			</list>
 		</property>
 		<property name="properties">
@@ -363,7 +363,7 @@
 		<property name="keyword" value="adosada" />
 		<property name="propertiesFound">
 			<list>
-				
+				<ref bean="property1" />
 			</list>
 		</property>
 	</bean>

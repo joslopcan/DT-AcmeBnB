@@ -47,29 +47,24 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="PopulateDatabase.xml" partName="PopulateDatabase.xml" path="T:/Sample Workspace 1.8/Acme BnB/src/main/resources/PopulateDatabase.xml" title="PopulateDatabase.xml" tooltip="Acme BnB/src/main/resources/PopulateDatabase.xml" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="PopulateDatabase.xml" partName="PopulateDatabase.xml" path="E:/Sample Workspace 1.8/Acme BnB/src/main/resources/PopulateDatabase.xml" title="PopulateDatabase.xml" tooltip="Acme BnB/src/main/resources/PopulateDatabase.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme BnB/src/main/resources/PopulateDatabase.xml"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Property.java" partName="Property.java" path="T:/Sample Workspace 1.8/Acme BnB/src/main/java/domain/Property.java" title="Property.java" tooltip="Acme BnB/src/main/java/domain/Property.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Commentable.java" partName="Commentable.java" path="E:/Sample Workspace 1.8/Acme BnB/src/main/java/domain/Commentable.java" title="Commentable.java" tooltip="Acme BnB/src/main/java/domain/Commentable.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme BnB/src/main/java/domain/Commentable.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Property.java" partName="Property.java" path="E:/Sample Workspace 1.8/Acme BnB/src/main/java/domain/Property.java" title="Property.java" tooltip="Acme BnB/src/main/java/domain/Property.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme BnB/src/main/java/domain/Property.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="3" selectionOffset="1900" selectionTopPixel="351"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Audit.java" partName="Audit.java" path="T:/Sample Workspace 1.8/Acme BnB/src/main/java/domain/Audit.java" title="Audit.java" tooltip="Acme BnB/src/main/java/domain/Audit.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme BnB/src/main/java/domain/Audit.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="1020"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Comment.java" partName="Comment.java" path="T:/Sample Workspace 1.8/Acme BnB/src/main/java/domain/Comment.java" title="Comment.java" tooltip="Acme BnB/src/main/java/domain/Comment.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme BnB/src/main/java/domain/Comment.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="3" selectionOffset="1217" selectionTopPixel="64"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Lessor.java" partName="Lessor.java" path="T:/Sample Workspace 1.8/Acme BnB/src/main/java/domain/Lessor.java" title="Lessor.java" tooltip="Acme BnB/src/main/java/domain/Lessor.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Lessor.java" partName="Lessor.java" path="E:/Sample Workspace 1.8/Acme BnB/src/main/java/domain/Lessor.java" title="Lessor.java" tooltip="Acme BnB/src/main/java/domain/Lessor.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Acme BnB/src/main/java/domain/Lessor.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="3" selectionOffset="1445" selectionTopPixel="918"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="715"/>
 </editor>
 </editors>
 <views>
@@ -90,6 +85,7 @@
 </view>
 <view id="org.eclipse.search.ui.views.SearchView" partName="Search">
 <viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
 <view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
 </viewState>
 </view>
@@ -99,6 +95,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Errors"/>
 <category IMemento.internal.id="Warnings (2 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="219" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
@@ -134,7 +131,7 @@
 <viewState CommonNavigator.LINKING_ENABLED="0"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
+<perspectives activePart="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -203,10 +200,10 @@
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars>
-<fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@1d14958a" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
+<fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@1d14958a" orientation="256" selectedTabId="org.eclipse.search.ui.views.SearchView" style="0">
 <fastViews>
 <view id="org.eclipse.ui.views.ProgressView" ratio="0.3"/>
-<view id="org.eclipse.search.ui.views.SearchView" ratio="0.3"/>
+<view id="org.eclipse.search.ui.views.SearchView" ratio="0.29913473"/>
 <view id="org.eclipse.jdt.junit.ResultView" ratio="0.4"/>
 </fastViews>
 </fastViewBar>
@@ -274,7 +271,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@631ebf05" ratio="0.5" ratioLeft="836" ratioRight="836" relationship="2" relative="org.eclipse.ui.internal.ViewStack@4c02bc48">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@631ebf05" ratio="0.17286538" ratioLeft="330" ratioRight="1579" relationship="2" relative="org.eclipse.ui.internal.ViewStack@4c02bc48">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -322,6 +319,15 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/Invoice.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/Request.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/Actor.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/Lessor.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/Acme BnB/src/main/resources/PopulateDatabase.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/Acme BnB/src/main/resources/PopulateDatabase.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/utilities/PopulateDatabase.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/Actor.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/Commentable.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/Acme BnB/src/main/resources/PopulateDatabase.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/Commentable.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/Property.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Acme BnB/src/main/java/domain/Lessor.java"/>
 </editors>
 <item historyLabel="Request.java" index="0">
@@ -402,8 +408,77 @@
 <item historyLabel="Lessor.java" index="9">
 <position info="not_deleted" x="1445" y="3"/>
 </item>
-<item active="true" historyLabel="Comment.java" index="5">
-<position info="not_deleted" x="1217" y="3"/>
+<item historyLabel="Comment.java" index="5">
+<position/>
+</item>
+<item historyLabel="PopulateDatabase.xml" index="10">
+<position/>
+</item>
+<item historyLabel="PopulateDatabase.xml" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PopulateDatabase.java" index="12">
+<position info="not_deleted" x="1986" y="0"/>
+</item>
+<item historyLabel="PopulateDatabase.xml" index="10">
+<position info="not_deleted" x="10939" y="0"/>
+</item>
+<item historyLabel="PopulateDatabase.java" index="12">
+<position info="not_deleted" x="1948" y="0"/>
+</item>
+<item historyLabel="PopulateDatabase.xml" index="10">
+<position info="not_deleted" x="11183" y="0"/>
+</item>
+<item historyLabel="Comment.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Comment.java" index="5">
+<position info="not_deleted" x="1222" y="0"/>
+</item>
+<item historyLabel="Actor.java" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Commentable.java" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Commentable.java" index="14">
+<position info="not_deleted" x="188" y="0"/>
+</item>
+<item historyLabel="Comment.java" index="5">
+<position info="not_deleted" x="1222" y="0"/>
+</item>
+<item historyLabel="Comment.java" index="5">
+<position info="not_deleted" x="1207" y="0"/>
+</item>
+<item historyLabel="Comment.java" index="5">
+<position info="not_deleted" x="1260" y="0"/>
+</item>
+<item historyLabel="PopulateDatabase.xml" index="15">
+<position info="not_deleted" x="5731" y="0"/>
+</item>
+<item historyLabel="Commentable.java" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PopulateDatabase.xml" index="15">
+<position info="not_deleted" x="11083" y="9"/>
+</item>
+<item historyLabel="Property.java" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Property.java" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Lessor.java" index="18">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Lessor.java" index="18">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Property.java" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="PopulateDatabase.xml" index="15">
+<position info="not_deleted" x="11083" y="9"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -411,6 +486,14 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@5c6ae889"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@4c02bc48"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@3edd044d"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@42137ac0"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 <trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
@@ -420,6 +503,7 @@
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@1d14958a"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@631ebf05"/>
 </trimArea>
 </trimLayout>
 </window>
@@ -427,8 +511,23 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Lessor.java" tooltip="Acme BnB/src/main/java/domain/Lessor.java">
 <persistable path="/Acme BnB/src/main/java/domain/Lessor.java"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Property.java" tooltip="Acme BnB/src/main/java/domain/Property.java">
+<persistable path="/Acme BnB/src/main/java/domain/Property.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Commentable.java" tooltip="Acme BnB/src/main/java/domain/Commentable.java">
+<persistable path="/Acme BnB/src/main/java/domain/Commentable.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="PopulateDatabase.xml" tooltip="Acme BnB/src/main/resources/PopulateDatabase.xml">
+<persistable path="/Acme BnB/src/main/resources/PopulateDatabase.xml"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Actor.java" tooltip="Acme BnB/src/main/java/domain/Actor.java">
 <persistable path="/Acme BnB/src/main/java/domain/Actor.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Comment.java" tooltip="Acme BnB/src/main/java/domain/Comment.java">
+<persistable path="/Acme BnB/src/main/java/domain/Comment.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PopulateDatabase.java" tooltip="Acme BnB/src/main/java/utilities/PopulateDatabase.java">
+<persistable path="/Acme BnB/src/main/java/utilities/PopulateDatabase.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Request.java" tooltip="Acme BnB/src/main/java/domain/Request.java">
 <persistable path="/Acme BnB/src/main/java/domain/Request.java"/>
@@ -436,17 +535,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Invoice.java" tooltip="Acme BnB/src/main/java/domain/Invoice.java">
 <persistable path="/Acme BnB/src/main/java/domain/Invoice.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Comment.java" tooltip="Acme BnB/src/main/java/domain/Comment.java">
-<persistable path="/Acme BnB/src/main/java/domain/Comment.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Audit.java" tooltip="Acme BnB/src/main/java/domain/Audit.java">
 <persistable path="/Acme BnB/src/main/java/domain/Audit.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Property.java" tooltip="Acme BnB/src/main/java/domain/Property.java">
-<persistable path="/Acme BnB/src/main/java/domain/Property.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="PopulateDatabase.xml" tooltip="Acme BnB/src/main/resources/PopulateDatabase.xml">
-<persistable path="/Acme BnB/src/main/resources/PopulateDatabase.xml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Tenant.java" tooltip="Acme BnB/src/main/java/domain/Tenant.java">
 <persistable path="/Acme BnB/src/main/java/domain/Tenant.java"/>
@@ -462,12 +552,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CreditCard.java" tooltip="Acme BnB/src/main/java/domain/CreditCard.java">
 <persistable path="/Acme BnB/src/main/java/domain/CreditCard.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Commentable.java" tooltip="Acme BnB/src/main/java/domain/Commentable.java">
-<persistable path="/Acme BnB/src/main/java/domain/Commentable.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Auditor.java" tooltip="Acme BnB/src/main/java/domain/Auditor.java">
-<persistable path="/Acme BnB/src/main/java/domain/Auditor.java"/>
 </file>
 </mruList>
 </workbench>

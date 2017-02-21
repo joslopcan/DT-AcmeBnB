@@ -3,26 +3,26 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="237" key="DIALOG_WIDTH"/>
 		<item value="165" key="DIALOG_Y_ORIGIN"/>
-		<item value="947" key="DIALOG_X_ORIGIN"/>
 		<item value="362" key="DIALOG_HEIGHT"/>
+		<item value="947" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wholeword"/>
-		<item value="2" key="selection"/>
+		<item value="property1" key="selection"/>
 		<list key="findhistory">
+			<item value="property1"/>
+			<item value="request1"/>
+			<item value="comment1"/>
+			<item value="SystemConfig"/>
 			<item value="2"/>
 			<item value="comment2"/>
 			<item value="request3"/>
 			<item value="credi"/>
-			<item value="creditCard2"/>
-			<item value="invoice1"/>
-			<item value="invoice3"/>
-			<item value="invoice"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Double"/>

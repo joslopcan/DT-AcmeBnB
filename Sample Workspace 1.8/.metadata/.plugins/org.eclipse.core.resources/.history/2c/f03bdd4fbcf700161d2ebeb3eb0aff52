@@ -363,7 +363,7 @@
 		<property name="keyword" value="adosada" />
 		<property name="propertiesFound">
 			<list>
-				
+				<ref bean="property1" />
 			</list>
 		</property>
 	</bean>
