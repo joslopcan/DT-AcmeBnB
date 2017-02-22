@@ -714,7 +714,7 @@
 		<property name="checkinDate" value="18/01/2017" />
 		<property name="checkoutDate" value="20/01/2017" />
 		<property name="smoker" value="true" />
-		<property name="status" value="ACCEPTED" />
+		<property name="status" value="PENDING" />
 		<property name="tenant" ref="tenant1" />
 		<property name="property" ref="property1" />
 		<property name="creditCard" ref="creditCard1" />
@@ -724,7 +724,7 @@
 		<property name="checkinDate" value="20/01/2017" />
 		<property name="checkoutDate" value="23/01/2017" />
 		<property name="smoker" value="true" />
-		<property name="status" value="DENIED" />
+		<property name="status" value="PENDING" />
 		<property name="tenant" ref="tenant1" />
 		<property name="property" ref="property2" />
 		<property name="creditCard" ref="creditCard1" />
