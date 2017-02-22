@@ -274,7 +274,7 @@
 				
 			</list>
 		</property>
-		<property name="pendingRequest">
+		<property name="request">
 			<list>
 				
 			</list>
@@ -309,7 +309,7 @@
 				<ref bean="comment3" />
 			</list>
 		</property>
-		<property name="pendingRequest">
+		<property name="request">
 			<list>
 				<ref bean="request2" />
 				<ref bean="request3" />
@@ -343,7 +343,7 @@
 				<ref bean="comment1" />
 			</list>
 		</property>
-		<property name="pendingRequest">
+		<property name="request">
 			<list>
 				<ref bean="request1" />
 			</list>
