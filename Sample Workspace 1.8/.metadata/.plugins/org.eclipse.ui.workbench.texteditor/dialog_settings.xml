@@ -12,17 +12,17 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
-		<item value="false" key="wholeword"/>
-		<item value="valid" key="selection"/>
+		<item value="true" key="wholeword"/>
+		<item value="property1" key="selection"/>
 		<list key="findhistory">
-			<item value="valid"/>
-			<item value="finder"/>
-			<item value="attribute1"/>
-			<item value="attr"/>
-			<item value="at"/>
-			<item value="smok"/>
-			<item value="comm"/>
-			<item value="com"/>
+			<item value="property1"/>
+			<item value="request1"/>
+			<item value="comment1"/>
+			<item value="SystemConfig"/>
+			<item value="2"/>
+			<item value="comment2"/>
+			<item value="request3"/>
+			<item value="credi"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Double"/>

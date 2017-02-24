@@ -35,7 +35,7 @@ public class Lessor extends Actor implements Commentable {
 	}
 
 
-	private Collection<Request>		pendingRequest;
+	private Collection<Request>		requests;
 	private Collection<Property>	properties;
 	private CreditCard				creditCard;
 
@@ -50,12 +50,12 @@ public class Lessor extends Actor implements Commentable {
 	}
 
 	@OneToMany
-	public Collection<Request> getPendingRequest() {
-		return pendingRequest;
+	public Collection<Request> getRequests() {
+		return requests;
 	}
 
-	public void setPendingRequest(Collection<Request> pendingRequest) {
-		this.pendingRequest = pendingRequest;
+	public void setRequests(Collection<Request> requests) {
+		this.requests = requests;
 	}
 
 	@OneToMany(mappedBy = "lessor")

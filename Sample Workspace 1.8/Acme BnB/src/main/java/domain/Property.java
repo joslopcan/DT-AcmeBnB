@@ -10,7 +10,6 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -38,7 +37,7 @@ public class Property extends DomainEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
-	@NotNull
+
 	@Min(0)
 	public double getRate() {
 		return rate;
