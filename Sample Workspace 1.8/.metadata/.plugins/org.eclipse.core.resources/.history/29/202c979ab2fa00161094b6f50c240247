@@ -1,0 +1,34 @@
+
+package repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import domain.Administrator;
+import domain.Lessor;
+
+@Repository
+public interface AdministratorRepository extends JpaRepository<Administrator, Integer> {
+
+	@Query("select a from Administrator a where a.userAccount.id = ?1")
+	Administrator findByUserAccountId(int userAccountId);
+
+	@Query("select avg(l.requests.size) from Lessor l join l.requests r where r.status = 1")
+	Double avgNumberOfAcceptedRequestsPerLessor();
+
+	@Query("select avg(l.requests.size) from Lessor l join l.requests r where r.status = 2")
+	Double avgNumberOfDeniedRequestsPerLessor();
+	
+	@Query("select avg(t.requests.size) from Tenant t join t.requests r where r.status = 1")
+	Double avgNumberOfAcceptedRequestsPerTenant();
+	
+	@Query("select avg(t.requests.size) from Tenant t join t.requests r where r.status = 2")
+	Double avgNumberOfDeniedRequestsPerTenant();
+	
+	@Query("select l from Lessor l join l.requests r where r.status = 1 and l.requests.size = (select max(l.requests.size) from Lessor l join l.requests r where r.status = 1)")
+	Lessor lessorWhoApprovedMoreRequests();
+
+	@Query("select l from Lessor l join l.requests r where r.status = 2 and l.requests.size = (select max(l.requests.size) from Lessor l join l.requests r where r.status = 2)")
+	Lessor lessorWhoDeniedMoreRequests();
+}

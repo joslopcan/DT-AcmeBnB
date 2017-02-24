@@ -52,6 +52,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="B:\Sample Workspace 1.8\Acme BnB"/>
 			<item value="T:\Sample Workspace 1.8\Acme BnB"/>
 			<item value="E:\Templates\Sample-Project-1.8"/>
 			<item value="E:\Sample-Project-1.8"/>
