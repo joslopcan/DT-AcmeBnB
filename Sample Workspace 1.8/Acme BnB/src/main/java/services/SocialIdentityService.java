@@ -49,10 +49,10 @@ public class SocialIdentityService {
 		return result;
 	}
 
-	public void save(SocialIdentity socialIdentity) {
+	public SocialIdentity save(SocialIdentity socialIdentity) {
 		Assert.notNull(socialIdentity);
 
-		socialIdentityRepository.save(socialIdentity);
+		return socialIdentityRepository.save(socialIdentity);
 	}
 
 	public void delete(SocialIdentity socialIdentity) {

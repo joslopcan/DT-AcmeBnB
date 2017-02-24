@@ -49,10 +49,10 @@ public class CreditCardService {
 		return result;
 	}
 
-	public void save(CreditCard creditCard) {
+	public CreditCard save(CreditCard creditCard) {
 		Assert.notNull(creditCard);
 
-		creditCardRepository.save(creditCard);
+		return creditCardRepository.save(creditCard);
 	}
 
 	public void delete(CreditCard creditCard) {

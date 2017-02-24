@@ -51,10 +51,10 @@ public class TenantService {
 		return result;
 	}
 
-	public void save(Tenant tenant) {
+	public Tenant save(Tenant tenant) {
 		Assert.notNull(tenant);
 
-		tenantRepository.save(tenant);
+		return tenantRepository.save(tenant);
 	}
 
 	public void delete(Tenant tenant) {

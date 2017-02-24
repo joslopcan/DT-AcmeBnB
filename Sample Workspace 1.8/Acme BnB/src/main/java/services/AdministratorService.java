@@ -51,10 +51,10 @@ public class AdministratorService {
 		return result;
 	}
 
-	public void save(Administrator administrator) {
+	public Administrator save(Administrator administrator) {
 		Assert.notNull(administrator);
 
-		administratorRepository.save(administrator);
+		return administratorRepository.save(administrator);
 	}
 
 	public void delete(Administrator administrator) {

@@ -51,10 +51,10 @@ public class ActorService {
 		return result;
 	}
 
-	public void save(Actor actor) {
+	public Actor save(Actor actor) {
 		Assert.notNull(actor);
 
-		actorRepository.save(actor);
+		return actorRepository.save(actor);
 	}
 
 	public void delete(Actor actor) {

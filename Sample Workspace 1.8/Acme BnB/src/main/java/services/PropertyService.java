@@ -49,10 +49,10 @@ public class PropertyService {
 		return result;
 	}
 
-	public void save(Property property) {
+	public Property save(Property property) {
 		Assert.notNull(property);
 
-		propertyRepository.save(property);
+		return propertyRepository.save(property);
 	}
 
 	public void delete(Property property) {

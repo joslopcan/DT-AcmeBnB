@@ -49,10 +49,10 @@ public class AttributeService {
 		return result;
 	}
 
-	public void save(Attribute attribute) {
+	public Attribute save(Attribute attribute) {
 		Assert.notNull(attribute);
 
-		attributeRepository.save(attribute);
+		return attributeRepository.save(attribute);
 	}
 
 	public void delete(Attribute attribute) {

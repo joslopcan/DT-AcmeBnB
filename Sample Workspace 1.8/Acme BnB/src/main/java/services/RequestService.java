@@ -49,10 +49,10 @@ public class RequestService {
 		return result;
 	}
 
-	public void save(Request request) {
+	public Request save(Request request) {
 		Assert.notNull(request);
 
-		requestRepository.save(request);
+		return requestRepository.save(request);
 	}
 
 	public void delete(Request request) {

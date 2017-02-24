@@ -51,10 +51,10 @@ public class LessorService {
 		return result;
 	}
 
-	public void save(Lessor lessor) {
+	public Lessor save(Lessor lessor) {
 		Assert.notNull(lessor);
 
-		lessorRepository.save(lessor);
+		return lessorRepository.save(lessor);
 	}
 
 	public void delete(Lessor lessor) {
