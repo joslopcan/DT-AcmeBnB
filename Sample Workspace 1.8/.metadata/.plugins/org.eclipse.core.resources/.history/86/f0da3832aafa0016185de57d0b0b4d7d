@@ -1,0 +1,174 @@
+package controllers;
+
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.util.Assert;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import domain.Lessor;
+
+import forms.LessorRegisterForm;
+
+
+import security.Authority;
+import security.UserAccount;
+import security.UserAccountService;
+import services.LessorService;
+
+@Controller
+@RequestMapping("/lessor")
+public class LessorController extends AbstractController {
+	// Services
+	@Autowired
+	private LessorService lessorService;
+	@Autowired
+	private UserAccountService userAccountService;
+
+
+	public LessorController() {
+		super();
+	}
+
+	
+	
+	@RequestMapping(value = "/create", method = RequestMethod.GET)
+	public ModelAndView create() {
+		ModelAndView result;
+		LessorRegisterForm lessorForm;
+		lessorForm = new LessorRegisterForm();
+		result = createEditModelAndView(lessorForm);
+		return result;
+	}
+	
+	//TODO METER EN EL CREATE DE LESSOR EL CHECKBOX PARA COMPROBAR QUE ACEPTA LOS TEMS&CONDITIONS
+
+	@RequestMapping(value = "/edit", method = RequestMethod.GET)
+	public ModelAndView edit(@RequestParam int lessorId) {
+		ModelAndView result;
+		
+		Lessor lessor = lessorService.findOne(lessorId);
+		
+		Assert.notNull(lessor);
+		result = createEditModelAndView(lessor);
+		return result;
+
+	}
+
+	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
+	public ModelAndView save(@Valid Cook cook, BindingResult binding) {
+		ModelAndView result;
+		
+		if (cook.getId() != 0) {
+			cook.setUserAccount(cookService.findByPrincipal().getUserAccount());
+			Cook aux = cookService.findOne(cook.getId());
+			cook.setFolders(aux.getFolders());
+			cook.setRegMasterClasses(aux.getRegMasterClasses());
+			cook.setSocialIdentity(aux.getSocialIdentity());
+			cook.setMasterclasses(aux.getMasterclasses());
+		} else {
+			try{
+			UserAccount userAccount = new UserAccount();
+			Authority authority = new Authority();
+			authority.setAuthority(authority.COOK);
+			userAccount.addAuthority(authority);
+			Md5PasswordEncoder encoder = new Md5PasswordEncoder();
+			if (cook.getUserAccount().getPassword().length() > 4) {
+				String password = encoder.encodePassword(cook.getUserAccount()
+						.getPassword(), null);
+				userAccount.setPassword(password);
+			}
+			if (cook.getUserAccount().getUsername().length() > 4) {
+				userAccount.setUsername(cook.getUserAccount().getUsername());
+				userAccountService.save(userAccount);
+			}
+			userAccount = userAccountService.findAll().get(
+					userAccountService.findAll().size() - 1);
+			cook.setUserAccount(userAccount);
+			}catch(DataIntegrityViolationException exception){
+				result = createEditModelAndView(cook, "cook.commit.error");
+			}
+		}
+		try {
+			Cook savedCook = cookService.save(cook);
+			
+			if (cook.getId() == 0) {
+				Collection<Folder> auxFolders = new ArrayList<Folder>();
+				Folder inbox = folderService.create();
+				inbox.setActor(savedCook);
+				inbox.setName("Inbox");
+				folderService.save(inbox);
+				auxFolders.add(inbox);
+				
+				Folder outbox = folderService.create();
+				outbox.setActor(savedCook);
+				outbox.setName("Outbox");
+				folderService.save(outbox);
+				auxFolders.add(outbox);
+				
+				Folder spambox = folderService.create();
+				spambox.setActor(savedCook);
+				spambox.setName("Spambox");
+				folderService.save(spambox);
+				auxFolders.add(spambox);
+				
+				Folder trashbox = folderService.create();
+				trashbox.setActor(savedCook);
+				trashbox.setName("Trashbox");
+				folderService.save(trashbox);
+				auxFolders.add(trashbox);
+				
+				savedCook.setFolders(auxFolders);
+				cookService.save(savedCook);
+			}
+			
+			result = new ModelAndView("redirect:/");
+		} catch (Throwable oops) {
+
+			result = createEditModelAndView(cook, "cook.commit.error");
+		}
+
+		return result;
+	}
+
+
+	@RequestMapping(value = "/learningMaterialMenu", method = RequestMethod.GET)
+	public ModelAndView learningMaterialMenu() {
+		ModelAndView result;
+		
+		
+		result = new ModelAndView("/cook/learningMaterialMenu");
+
+		return result;
+	}
+	
+	
+	protected ModelAndView createEditModelAndView(Cook cook) {
+		ModelAndView result;
+
+		result = createEditModelAndView(cook, null);
+
+		return result;
+	}
+
+	protected ModelAndView createEditModelAndView(Cook cook, String message) {
+		ModelAndView result;
+
+		result = new ModelAndView("cook/edit");
+		result.addObject("cook", cook);
+		result.addObject("message", message);
+		return result;
+
+	}
+}

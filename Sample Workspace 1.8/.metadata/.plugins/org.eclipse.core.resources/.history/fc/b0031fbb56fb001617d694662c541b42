@@ -1,0 +1,21 @@
+# messages.properties
+#
+# Copyright (C) 2017 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+lessor.userName				= User Name
+lessor.password				= Password
+lessor.name					= Name
+lessor.surname			    = Surname
+lessor.email				= Email
+lessor.phone				= Phone
+lessor.picture				= Picture
+lessor.create				= Create
+lessor.save					= Save
+lessor.cancel				= Cancel
+lessor.confirm.create		= Are you sure you want to create a lessor?
+lessor.confirm.delete		= Are you sure you want to delete a lessor?
+

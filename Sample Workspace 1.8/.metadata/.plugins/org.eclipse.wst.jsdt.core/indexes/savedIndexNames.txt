@@ -1,2 +1,7 @@
-INDEX VERSION 1.122+B:\Sample Workspace 1.8\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+INDEX VERSION 1.122+T:\Sample Workspace 1.8\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3966690310.index
+2258245836.index
+746095212.index
+492698754.index
+1149680554.index
 2017347195.index

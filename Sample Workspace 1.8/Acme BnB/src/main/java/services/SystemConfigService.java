@@ -49,10 +49,10 @@ public class SystemConfigService {
 		return result;
 	}
 
-	public void save(SystemConfig systemConfig) {
+	public SystemConfig save(SystemConfig systemConfig) {
 		Assert.notNull(systemConfig);
 
-		systemConfigRepository.save(systemConfig);
+		return systemConfigRepository.save(systemConfig);
 	}
 
 	public void delete(SystemConfig systemConfig) {

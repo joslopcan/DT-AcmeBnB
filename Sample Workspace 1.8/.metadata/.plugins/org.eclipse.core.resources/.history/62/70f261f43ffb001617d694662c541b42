@@ -1,0 +1,82 @@
+
+package controllers;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import security.UserAccountService;
+import services.LessorService;
+import domain.Lessor;
+import forms.LessorRegisterForm;
+
+@Controller
+@RequestMapping("/lessor")
+public class LessorController extends AbstractController {
+
+	// Services
+	@Autowired
+	private LessorService		lessorService;
+
+
+	//en este controlador solo se controla la creación de lessor
+
+	public LessorController() {
+		super();
+	}
+
+	@RequestMapping(value = "/create", method = RequestMethod.GET)
+	public ModelAndView create() {
+		ModelAndView result;
+		Lessor lessor;
+		lessor = lessorService.create();
+		result = createEditModelAndView(lessor);
+		return result;
+	}
+
+	//TODO METER EN EL CREATE DE LESSOR EL CHECKBOX PARA COMPROBAR QUE ACEPTA LOS TEMS&CONDITIONS
+
+	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
+	public ModelAndView save(@Valid LessorRegisterForm lessorRegisterForm, BindingResult binding) {
+		ModelAndView result;
+		Lessor lessor;
+		lessor = lessorService.reconstruct(lessorRegisterForm, binding);
+		if (binding.hasErrors()) {
+			result = createEditModelAndView(lessor);
+		} else {
+			try {
+				Lessor savedLessor = lessorService.save(lessor);
+
+				result = new ModelAndView("redirect:/");
+			} catch (Throwable oops) {
+
+				result = createEditModelAndView(lessor, "lessor.commit.error");
+			}
+
+		}
+		return result;
+	}
+
+	protected ModelAndView createEditModelAndView(Lessor lessor) {
+		ModelAndView result;
+
+		result = createEditModelAndView(lessor, null);
+
+		return result;
+	}
+
+	protected ModelAndView createEditModelAndView(Lessor lessor, String message) {
+		ModelAndView result;
+
+		result = new ModelAndView("lessor/edit");
+		result.addObject("lessorRegisterForm", lessor);
+		result.addObject("message", message);
+		return result;
+
+	}
+}

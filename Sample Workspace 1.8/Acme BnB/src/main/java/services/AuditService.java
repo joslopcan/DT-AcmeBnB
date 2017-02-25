@@ -49,10 +49,10 @@ public class AuditService {
 		return result;
 	}
 
-	public void save(Audit audit) {
+	public Audit save(Audit audit) {
 		Assert.notNull(audit);
 
-		auditRepository.save(audit);
+		return auditRepository.save(audit);
 	}
 
 	public void delete(Audit audit) {

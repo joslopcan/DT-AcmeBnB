@@ -1,3 +1,4 @@
+
 package services;
 
 import java.util.Collection;
@@ -9,7 +10,6 @@ import org.springframework.util.Assert;
 
 import repositories.CommentRepository;
 import domain.Comment;
-
 
 @Service
 @Transactional
@@ -49,10 +49,10 @@ public class CommentService {
 		return result;
 	}
 
-	public void save(Comment comment) {
+	public Comment save(Comment comment) {
 		Assert.notNull(comment);
 
-		commentRepository.save(comment);
+		return commentRepository.save(comment);
 	}
 
 	public void delete(Comment comment) {

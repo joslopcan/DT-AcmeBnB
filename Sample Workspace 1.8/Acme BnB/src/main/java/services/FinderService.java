@@ -49,10 +49,10 @@ public class FinderService {
 		return result;
 	}
 
-	public void save(Finder finder) {
+	public Finder save(Finder finder) {
 		Assert.notNull(finder);
 
-		finderRepository.save(finder);
+		return finderRepository.save(finder);
 	}
 
 	public void delete(Finder finder) {

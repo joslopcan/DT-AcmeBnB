@@ -18,6 +18,8 @@ public class Tenant extends Actor implements Commentable {
 		super();
 		comments = new HashSet<Comment>();
 		invoices = new HashSet<Invoice>();
+		requests = new HashSet<Request>();
+		invoices = new HashSet<Invoice>();
 	}
 
 

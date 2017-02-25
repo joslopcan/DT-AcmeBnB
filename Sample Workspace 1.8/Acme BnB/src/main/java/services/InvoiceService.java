@@ -49,10 +49,10 @@ public class InvoiceService {
 		return result;
 	}
 
-	public void save(Invoice invoice) {
+	public Invoice save(Invoice invoice) {
 		Assert.notNull(invoice);
 
-		invoiceRepository.save(invoice);
+		return invoiceRepository.save(invoice);
 	}
 
 	public void delete(Invoice invoice) {

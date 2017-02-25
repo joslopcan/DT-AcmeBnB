@@ -1,8 +1,8 @@
 
 package domain;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
@@ -17,7 +17,9 @@ public class Lessor extends Actor implements Commentable {
 
 	public Lessor() {
 		super();
-		comments = new HashSet<Comment>();
+		comments = new ArrayList<Comment>();
+		requests = new ArrayList<Request>();
+		properties = new ArrayList<Property>();
 	}
 
 

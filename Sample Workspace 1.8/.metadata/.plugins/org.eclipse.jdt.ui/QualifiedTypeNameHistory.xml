@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.springframework.transaction.PlatformTransactionManager"/>
-<fullyQualifiedTypeName name="controllers.AbstractController"/>
-<fullyQualifiedTypeName name="javax.validation.constraints.DecimalMax"/>
-<fullyQualifiedTypeName name="javax.validation.constraints.NotNull.List"/>
-<fullyQualifiedTypeName name="domain.Event"/>
-<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
-<fullyQualifiedTypeName name="security.UserAccount"/>
-<fullyQualifiedTypeName name="services.BusinessException"/>
 <fullyQualifiedTypeName name="org.hibernate.validator.constraints.Range"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="org.springframework.format.annotation.DateTimeFormat"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
-<fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
 <fullyQualifiedTypeName name="org.springframework.util.Assert"/>
 <fullyQualifiedTypeName name="javax.persistence.Access"/>
-<fullyQualifiedTypeName name="domain.DomainEntity"/>
 <fullyQualifiedTypeName name="org.hibernate.validator.constraints.Length"/>
 <fullyQualifiedTypeName name="domain.SampleEntity"/>
 <fullyQualifiedTypeName name="org.hibernate.validator.constraints.NotEmpty.List"/>
@@ -40,7 +30,6 @@
 <fullyQualifiedTypeName name="org.hibernate.annotations.common.AssertionFailure"/>
 <fullyQualifiedTypeName name="javax.transaction.Transactional"/>
 <fullyQualifiedTypeName name="repositories.ExamRepository"/>
-<fullyQualifiedTypeName name="org.springframework.validation.Validator"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="org.junit.After"/>
 <fullyQualifiedTypeName name="org.springframework.test.annotation.Timed"/>
@@ -56,4 +45,19 @@
 <fullyQualifiedTypeName name="javax.validation.constraints.Past"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
 <fullyQualifiedTypeName name="domain.Actor"/>
+<fullyQualifiedTypeName name="services.LessorService"/>
+<fullyQualifiedTypeName name="domain.Lessor"/>
+<fullyQualifiedTypeName name="security.Authority"/>
+<fullyQualifiedTypeName name="org.springframework.security.authentication.encoding.Md5PasswordEncoder"/>
+<fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
+<fullyQualifiedTypeName name="domain.DomainEntity"/>
+<fullyQualifiedTypeName name="forms.LessorRegisterForm"/>
+<fullyQualifiedTypeName name="security.UserAccountService"/>
+<fullyQualifiedTypeName name="security.UserAccount"/>
+<fullyQualifiedTypeName name="forms.TenantRegisterForm"/>
+<fullyQualifiedTypeName name="javax.validation.Validator"/>
+<fullyQualifiedTypeName name="org.springframework.validation.Validator"/>
+<fullyQualifiedTypeName name="services.FinderService"/>
+<fullyQualifiedTypeName name="domain.Finder"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
 </qualifiedTypeNameHistroy>
